@@ -1,0 +1,459 @@
+body {
+    font-family: Poppins, sans-serif;
+    color: #ffffff;
+    background-color: #15161A;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+  }
+  
+  .navbar {
+    position: sticky; 
+    top: 0;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #000; Same as body to maintain consistency */
+    padding: 10px 20px;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 50px;
+    font-size: 25px;
+  }
+  
+  .nav-link, .logo {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-weight: 1600;
+  }
+  
+  .logo {
+    font-size: 30px; /* Start with the initial font size */
+    cursor: pointer;
+  }
+  
+  .logo:hover {
+    transform: scale(1.1); /* Increase size by 10% on hover */
+  }
+  
+  .nav-link:hover {
+    color: #a020f0; /* The purple color you want */
+  }
+
+  .logo-part1 { /* Style for "maruthi" */
+    color: #a020f0; /* The purple color you want */
+  }
+  
+  .nav-link:hover {
+    color: #a020f0; /* The purple color you want */
+  }
+
+  .logo-link {
+    color: #fff; /* or any color your logo text currently has */
+    text-decoration: none; /* Removes the underline from the link */
+    display: inline-block; /* or block, depending on your layout */
+    /* Apply any other styles that the logo text currently has */
+  }
+
+  
+  #intro {
+    padding-top: 0px;
+    margin: auto;
+    max-width: 1100px;
+  }
+
+  .titlecolor { 
+    color: #a020f0;
+  }
+
+  .paracolor { 
+    color: #ff7f11;
+  }
+  
+  #intro h1 {
+    color: #ffffff;
+    font-size: 55px;
+  }
+
+  #intro p {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  #intro p a {
+    text-decoration: none;
+    color: #ff7f11;
+  }
+
+  #intro p a:hover {
+    opacity: 80%;
+  }
+  
+  #projects {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  
+  #social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  /* You'll need to add media queries to handle responsiveness */
+  
+  .card-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+  }
+  
+  .card {
+    background: #333; /* Set the background color */
+    border-radius: 8px;
+    width: 300px; /* Set the width */
+    margin: 10px;
+    position: relative;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 20px rgba(255, 127, 17, 0.5); /* Adjust the color and size of the glow effect */
+  }
+  
+  .card-image {
+    z-index: 50;
+    height: 150px; /* Set the height */
+    background: #222; /* Placeholder for the image */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    text-align: center;
+  }
+
+  .card-image img {
+    z-index: 0;
+    width: 60%; /* Makes the image fill the container's width */
+    height: auto; /* Keeps the image's aspect ratio */
+    border-top-left-radius: 8px; /* Matches the card's top-left border-radius */
+    border-top-right-radius: 8px; /* Matches the card's top-right border-radius */
+  }
+  
+  .card-content {
+    padding: 15px;
+    color: white; /* Set the text color */
+  }
+  
+  .card-content h2 {
+    margin-bottom: 10px;
+  }
+  
+  .card-content p {
+    margin-bottom: 10px;
+    opacity: 50%;
+  }
+  
+  .card-date {
+    font-style: italic;
+  }
+  
+  .card-link-icon { /* Adjust this class to match the name in your HTML */
+    position: absolute; /* Position absolutely relative to the card */
+    bottom: 20px; /* 10px from the bottom */
+    right: 20px; /* 10px from the right */
+    width: 24px; /* Width of the link icon */
+    height: 24px; /* Height of the link icon */
+    background: url('link.png') no-repeat center center; /* Use the correct path to your link icon image */
+    background-size: contain;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .card-link-icon:hover {
+    transform: scale(1.3); /* Increase size by 10% on hover */
+  }
+  
+
+  .footer {
+    color: #fff; /* White text */
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+    position: relative; /* Relative positioning to align child elements */
+  }
+  
+  .footer p, .footer-buttons, .copy {
+    margin-left: calc((100% - 1100px) / 2); /* Align left with the main content */
+    max-width: 1100px; /* Same max-width as main content */
+  }
+  
+  .footer-buttons {
+    display: flex; /* Align the buttons in a row */
+    flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+    align-items: center; /* Align buttons vertically */
+    gap: 20px; /* Spacing between buttons */
+  }
+  
+  .footer-btn {
+    display: inline-block; /* Align buttons inline */
+    background-color: #a020f0; /* Set the buttons to purple */
+    color: #fff; /* Button text color */
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0; /* Removed left and right margin */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 5px; /* Rounded corners for the buttons */
+  }
+  
+  .footer-btn:hover {
+    background-color: #c586c0; /* A lighter purple on hover */
+  }
+  
+
+  #awards-section {
+    background-color: #15161A; /* Your desired background color */
+    color: #ffffff; /* Text color */
+    padding: 25px; /* Adjust padding as needed */
+    max-width: 1400px;
+    margin: auto;
+  }
+  
+  .section-title {
+    color: #a020f0; /* The purple color for the title */
+    margin-bottom: 20px; /* Spacing between title and awards */
+    font-size: 48px;
+  }
+  
+  .awards-container {
+    display: grid; /* Use grid layout for the awards */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust '250px' based on your content and spacing needs */
+    gap: 20px; /* Space between awards */
+    padding: 20px 0; /* Top and bottom padding */
+  }
+  
+  .award {
+    background-color: #222; /* Darker background for each award */
+    padding: 10px; /* Padding inside each award */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 18px;
+  }
+  
+
+  #tools-section {
+    background-color: #15161A; /* Your desired background color */
+    color: #ffffff; /* Text color */
+    padding: 25px; /* Adjust padding as needed */
+    max-width: 1400px;
+    margin: auto;
+  }
+
+  
+  .tools-container {
+    display: grid; /* Use grid layout for the awards */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust '250px' based on your content and spacing needs */
+    gap: 20px; /* Space between awards */
+    padding: 20px 0; /* Top and bottom padding */
+  }
+  
+  .tool {
+    background-color: #222; /* Darker background for each award */
+    padding: 10px; /* Padding inside each award */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 18px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+  
+  .tool:hover {
+    transform: scale(1.05); /* Slightly increase the size */
+    box-shadow: 0 0 15px rgba(255, 127, 17, 0.5); /* Glow effect */
+  }
+
+
+  #courses-section {
+    background-color: #15161A; /* Your desired background color */
+    color: #ffffff; /* Text color */
+    padding: 25px; /* Adjust padding as needed */
+    max-width: 1400px;
+    margin: auto;
+  }
+
+  
+  .courses-container {
+    display: grid; /* Use grid layout for the awards */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust '250px' based on your content and spacing needs */
+    gap: 20px; /* Space between awards */
+    padding: 20px 0; /* Top and bottom padding */
+  }
+  
+  .course {
+    background-color: #222; /* Darker background for each award */
+    padding: 10px; /* Padding inside each award */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 18px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+  
+  .course:hover {
+    transform: scale(1.05); /* Slightly increase the size */
+    box-shadow: 0 0 15px rgba(27, 237, 83, 0.5); /* Glow effect */
+  }
+
+  #research-section {
+    background-color: #15161A; /* Your desired background color */
+    color: #ffffff; /* Text color */
+    padding: 20px; /* Adjust padding as needed */
+    /* text-align: center; Center the content */
+    max-width: 1400px;
+    margin: auto;
+  }
+  
+  .section-title {
+    color: #a020f0; /* The purple color for the title */
+    /* Other styling to match the provided image */
+  }
+  
+  .research-link {
+    color: #ffffff; /* Text color for the links */
+    display: block; /* Each link will be on a new line */
+    margin: 10px 0; /* Spacing between links */
+    text-decoration: none; /* No underline */
+    font-size: 20px; /* Adjust font-size as needed */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  .research-link:hover {
+    color: #f020d1; /* Color change on hover */
+    transform: scale(1.05); /* Slightly increase the size */
+  }
+  
+  #organizations-section {
+    background-color: #15161A; /* Or any color you prefer */
+    color: #ffffff; /* Text color for the description */
+    padding: 20px; /* Adjust padding as needed */
+    max-width: 1400px;
+    margin: auto;
+  }
+  
+  .section-title {
+    color: #a020f0; /* The purple color for the title, adjust as needed */
+    /* Other styling to match the provided image */
+    margin-bottom: 1em; /* Spacing after the title */
+  }
+  
+  .organizations-container {
+    display: grid; /* Structure the content in a grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust minmax values as needed */
+    gap: 20px; /* Spacing between items */
+  }
+  
+  .organization {
+    background-color: #222; /* Darker background for each item */
+    padding: 10px; /* Padding inside each item */
+    border-radius: 5px; /* Rounded corners */
+    /* Remove transition and hover effects if they are not needed */
+  }
+  
+  .organization-name {
+    color: #FF7F11; /* Orange color for the organization name */
+    /* Additional styling if needed */
+  }
+
+
+
+  
+  #volunteering-section {
+    background-color: #15161A; /* Adjust to match your design */
+    color: #ffffff;
+    padding: 20px;
+    text-align: left;
+    max-width: 1400px;
+    margin: auto;
+  }
+  
+  .section-title {
+    color: #a020f0; /* Adjust to match your design */
+    font-size: 36px; /* Adjust based on your design */
+  }
+  
+  .hours {
+    color: #FF7F11; /* The color for the hours, adjust as needed */
+    font-size: 24px; /* Adjust based on your design */
+    margin-bottom: 20px;
+  }
+  
+  .volunteering-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .volunteer-role {
+    background-color: #222; /* Darker background for each item */
+    padding: 15px;
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  .role-title {
+    color: #FF7F11; /* The color for the role title, adjust as needed */
+    font-size: 20px; /* Adjust based on your design */
+  }
+  
+  .vorganization-name {
+    font-weight: bold;
+    color: greenyellow; 
+    margin-bottom: 10px;
+  }
+  
+  .role-description {
+    list-style: none; /* Removes the default list styling */
+    padding: 10px;
+  }
+  
+  .role-description li::before {
+    content: "•"; /* Adds a bullet before each item */
+    color: #FF7F11; /* The color for the bullet, adjust as needed */
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em; /* Ensures a consistent width for all bullets */
+    margin-left: -1em; /* Negative margin to align bullets with the text */
+  }
+  
+
+
+
+  #impactiq {
+    color: #a020f0;
+    margin: auto;
+    max-width: 1100px;
+    font-size: 56px;
+  }
+  
+  .introduction {
+    margin: auto;
+    max-width: 1100px;
+    margin-bottom: 20px;
+  }
+  
+  .feature {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: auto;
+    max-width: 1100px;
+  }
+  
+  .feature h2 {
+    color: #FF7F11; /* Orange color for feature titles */
+    margin-bottom: 10px;
+  }
